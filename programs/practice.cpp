@@ -1,22 +1,12 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Student {
-public:
-    string name;
-    int rollno;
-
-    Student(int num) {
-        rollno = num;
-    }
-    void print() {
-        cout << name <<" : "<< rollno << endl;
-    } 
-};
+// macro with parameter
+#define Area(l, b)(l > b ? l-b : l+b)
 
 int main() {
-    Student s(191);
-    s.name = "sapnenndra";
-    s.print();
+    int l = 25, b = 5, a;
+    
+    cout << "The Macro: " << Area(l, b) << endl;
     return 0;
 }
